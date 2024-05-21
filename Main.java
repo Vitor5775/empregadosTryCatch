@@ -2,8 +2,11 @@ import java.util.Scanner;
 
 public class Main {
 public static void main(String[] args) {
-try {
 Scanner sc = new Scanner(System.in);
+
+boolean inputSuccess = false;
+while (!inputSuccess) {
+try {
 System.out.println("Digite o nome do primeiro empregado: ");
 String nome = sc.nextLine();
 System.out.println("Digite o sobrenome do primeiro empregado: ");
@@ -25,12 +28,12 @@ System.out.println("Salário anual do segundo empregado: " + empregado.salario_a
 System.out.println("Aumento do primeiro empregado: " + empregado.aumento());
 System.out.println("Aumento do segundo empregado: " + empregado.aumento2());
 
+inputSuccess = true; 
 } catch (java.util.InputMismatchException e) {
 System.out.println("Erro de entrada. Certifique-se de inserir o tipo de dado correto.");
-} catch (java.util.NoSuchElementException e) {
-System.out.println("Elemento não encontrado. Certifique-se de fornecer todas as informações necessárias.");
-} catch (Exception e) {
-System.out.println("Ocorreu um erro inesperado: " + e.getMessage());
+sc.nextLine(); 
+    } 
+ }
+sc.close(); 
         }
     }
-}
