@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class Main {
 public static void main(String[] args) {
 try {
-
- Scanner sc = new Scanner(System.in);
+Scanner sc = new Scanner(System.in);
 System.out.println("Digite o nome do primeiro empregado: ");
 String nome = sc.nextLine();
 System.out.println("Digite o sobrenome do primeiro empregado: ");
